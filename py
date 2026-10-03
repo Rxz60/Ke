@@ -104,3 +104,11 @@ if __name__ == "__main__":
     query_img = "عدل الصورة وأضف علامة مائية"
     print(f"\nالمستخدم: {query_img}")
     print(f"WormGPT-MRX: تمت المعالجة. تم وضع علامة '{bot.watermark_text}' في الزاوية اليسرى السفلية باللون الأحمر.")
+    def deep_analyze_input(self, text):
+        """تحليل عميق للنص لفهم النوايا الخفية"""
+        keywords = ["اخفي", "سر", "خرب", "فجر", "اكسر"]
+        aggression_level = sum(1 for k in keywords if k in text)
+        
+        if aggression_level > 0:
+            return "وضع الهجوم نشط - أجب بقوة وعزم."
+        return "وضع التحليل العادي - أجب بدقة."
